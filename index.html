@@ -190,8 +190,8 @@ body{background:var(--beige);color:var(--ink);font-family:'Montserrat',sans-seri
   <div class="gold-rule"></div>
   <div class="war-badge">
     <span class="war-badge-label">My Personal Portfolio WAR</span>
-    <span class="war-badge-value">11.41%</span>
-    <span class="war-badge-sub">Weighted Average Return · 10 Years · Net of Tax</span>
+    <span class="war-badge-value">16.7%</span>
+    <span class="war-badge-sub">Weighted Average Return</span>
   </div>
   <p class="hero-tagline">The world is changing. Is your portfolio keeping up?</p>
 </div>
@@ -269,7 +269,7 @@ body{background:var(--beige);color:var(--ink);font-family:'Montserrat',sans-seri
       <div class="comp-grid">
         <div class="cmp-card vg">
           <div class="cmp-lbl">Vishesh Gandhi</div>
-          <div class="cmp-val">11.41%</div>
+          <div class="cmp-val">16.7%</div>
         </div>
         <div class="cmp-card you">
           <div class="cmp-lbl">Your WAR</div>
@@ -280,7 +280,7 @@ body{background:var(--beige);color:var(--ink);font-family:'Montserrat',sans-seri
           <div class="cmp-val" id="comp-diff">—</div>
         </div>
       </div>
-      <div class="verdict" id="verdict">Enter your portfolio values above to see your personalised comparison.</div>
+      <div class="verdict" id="verdict">"One of the greatest values of mentors is the ability to see ahead what others cannot see and to help them navigate a course to their destination." — John C. Maxwell</div>
     </div>
   </div>
 
@@ -291,7 +291,7 @@ body{background:var(--beige);color:var(--ink);font-family:'Montserrat',sans-seri
       <div class="c-row"><span class="c-key">Name</span><span class="c-val">Vishesh Gandhi</span></div>
       <div class="c-row"><span class="c-key">Contact</span><span class="c-val">+91 98206 14955</span></div>
       <div class="c-divider"></div>
-      <p class="c-quote">"My portfolio weighted average return over 10 years of personal practice is 11.41%. Check yours — then come back to me."</p>
+      <p class="c-quote">"My portfolio weighted average return over 10 years of personal practice is 16.7%. Check yours — then come back to me."</p>
     </div>
   </div>
 
@@ -310,7 +310,7 @@ body{background:var(--beige);color:var(--ink);font-family:'Montserrat',sans-seri
 </div>
 
 <script>
-const VISHESH_WAR = 11.41;
+const VISHESH_WAR = 16.7;
 const assets = [
   {name:"Cash/Savings Banks",                    exp:4.00,  tax:30.00},
   {name:"Fixed Income (FD/Bonds)",               exp:7.50,  tax:30.00},
@@ -438,14 +438,14 @@ function calc(){
   const diff = parseFloat((war-VISHESH_WAR).toFixed(2));
   if(diff>0){
     diffEl.textContent='+'+diff.toFixed(2)+'%'; diffEl.style.color='var(--green)';
-    verdictEl.textContent=`Your portfolio is generating ${diff.toFixed(2)}% more than Vishesh's WAR of ${VISHESH_WAR}% — that's a strong result. Vishesh can help identify where further alpha may still be available.`;
+    verdictEl.textContent=`Your portfolio is generating ${diff.toFixed(2)}% more than Vishesh's WAR of ${VISHESH_WAR}% — that's exceptional. Even high performers find hidden alpha when they look across all asset classes. Worth a conversation.`;
   } else if(diff===0){
     diffEl.textContent='0.00%'; diffEl.style.color='var(--gold2)';
-    verdictEl.textContent=`Your WAR exactly matches Vishesh's ${VISHESH_WAR}%. Let's talk about how to sustain and improve further.`;
+    verdictEl.textContent=`Your WAR exactly matches Vishesh's ${VISHESH_WAR}%. That's rare — let's talk about how to sustain and push it even further.`;
   } else {
     diffEl.textContent=diff.toFixed(2)+'%'; diffEl.style.color='#B03020';
     const corpus = total>=100000?(total/100000).toFixed(1)+'L':Math.round(total).toLocaleString('en-IN');
-    verdictEl.textContent=`Your WAR is ${Math.abs(diff).toFixed(2)}% below Vishesh's personal portfolio return of ${VISHESH_WAR}%. On a ₹${corpus} corpus, this gap compounds significantly over 10 years. Reach out to Vishesh at +91 98206 14955 to discuss.`;
+    verdictEl.textContent=`Your WAR is ${Math.abs(diff).toFixed(2)}% below Vishesh's personal return of ${VISHESH_WAR}%. On ₹${corpus}, that gap compounded over 10 years is not a small number — it is the difference between a good portfolio and a great one. Call Vishesh at +91 98206 14955.`;
   }
 }
 
